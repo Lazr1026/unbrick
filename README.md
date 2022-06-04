@@ -19,7 +19,7 @@ To unbrick the Wii U we will use an Rasberry Pi. I have only ever used an RPi0 b
 ### Setting up the software
 1. Set up RPIOS on a MicroSD. (Guide: [https://www.raspberrypi.com/documentation/computers/getting-started.html](https://www.raspberrypi.com/documentation/computers/getting-started.html))
 1. Power on your RPI and connect it to the internet.  
-1. Open up a terminal (`CTRL ALT T`) and run `wget https://raw.githubusercontent.com/Lazr1026/unbrick/pinand.sh && chmod +x pinand.sh`
+1. Open up a terminal (`CTRL ALT T`) and run `wget https://raw.githubusercontent.com/Lazr1026/unbrick/main/pinand.sh && chmod +x pinand.sh`
 1. Now run `./pinand.sh`.
 
 ### Solder the RPI to Wii U board
