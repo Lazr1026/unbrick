@@ -10,7 +10,7 @@ Usually if you need to restore vWii NAND, there is [vWii NAND Restorer](https://
 
 Wii U doesnt have something like that yet though. so we have to open up the console and solder some wires to the NAND.
 
-To unbrick the Wii U we will use an Rasberry Pi. I have only ever used an RPi0 but the pinouts should be the same on every RPi. If you want to use a Teensy to unbrick, refer to [this guide](https://gbatemp.net/threads/guide-kaflukes-hardmod-cbhc-unbrick-guide.476725/)
+To unbrick the Wii U we will use an Rasberry Pi. I have only ever used an RPi0 and RPi2b but the pinouts should be the same on every RPi. If you want to use a Teensy to unbrick, refer to [this guide](https://gbatemp.net/threads/guide-kaflukes-hardmod-cbhc-unbrick-guide.476725/)
 
 ## What you need
 - An slc.bin dump from *before* the brick, or an otp.bin dump.  
