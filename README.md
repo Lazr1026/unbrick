@@ -38,8 +38,7 @@ RPI:
 Wii U Board:  
 ![](./assets/images/solder.jpg)
 
-- It should look like this when finished. Use that pad off to the side as `GND`.  
-(Taken from Kaflukes CBHC Hardmod Guide)  
+- It should look like this when finished. Use that pad off to the side as `GND`.   
 ![](./assets/images/done.png)
 
 ## Fixing the NAND
