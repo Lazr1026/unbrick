@@ -38,12 +38,12 @@ RPI:
 Wii U Board:  
 ![](./assets/images/solder.jpg)
 
-- It should look like this when finished. Use that pad off to the side as `GND`.   
+- It should look like this when finished.   
 ![](./assets/images/done.png)
 
 ## Fixing the NAND
 
-Note: Now depending on what the hell you did, you could be doing something WAY different. We will be fixing a CBHC brick and flashing back the entire SLC here.  
+Note: Now depending on what the hell you did, you could be doing something WAY different (ie. only restoring certain pages). We will be flashing back an entire SLC image here.  
 
 ### FIXING THE NAND WITH ONLY OTP.BIN  
 
