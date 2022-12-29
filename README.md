@@ -53,7 +53,7 @@ Download [Eyekeys NAND Tools](https://github.com/koolkdev/wiiuqt/releases/tag/v0
 1. Power on the Wii U.  
 1. Turn on the RPI.  
 1. Open up a terminal and run `sudo ./pinand 50 read_id`, you should get something like this.  
-![](./assets/images/readid.jpg)
+![](./assets/images/readid.png)
 1. Run `sudo ./pinand 50 read_full 0 262144 slc.bin`.  
 1. Wait for it to finish reading. (DO NOT UNPLUG THE WII U OR RPI.)  
 1. Turn off the Wii U and RPI, insert the RPI' MicroSD in your PC.  
@@ -68,7 +68,7 @@ See the next section for flashing the NAND back to the Wii U.
 1. Turn on the Wii U.  
 1. Turn on the RPI.  
 1. Open a terminal and type in `sudo ./pinand 50 read_id`. You should get something like this.  
-![](./assets/images/readid.jpg)  
+![](./assets/images/readid.png)  
 1. Run `sudo ./pinand 50 erase_blocks 0 4096 && sudo ./pinand 50 write_full 0 262144 slc.bin`.   
 1. Wait for it to finish, this will take a LONG time (around 2 days for an RPi0). (DO NOT UNPLUG THE WIIU OR THE RPI.)  
 
