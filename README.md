@@ -34,7 +34,6 @@ To unbrick the Wii U we will use an Rasberry Pi. I have only ever used an RPi0 a
 Solder Points:  
 RPI:  
 ![](./assets/images/pinout.png)  
-![](./assets/images/back.png)
 Wii U Board:  
 ![](./assets/images/solder.jpg)
 
