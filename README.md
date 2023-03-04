@@ -83,7 +83,7 @@ See the next section for flashing the NAND back to the Wii U.
 ## Credits:  
 [rw-r-r-0644](https://github.com/rw-r-r-0664) - sending me an edited pinand and fixing it.  
 [GaryOderNichts](https://github.com/GaryOderNichts) - Emotional support while doing the hardmod.  
-[NoahAbc12345](https://github.com/NoahAbc12345) - Same thing as Gary.  
+[Nightkingale](https://github.com/Nightkingale) - Same thing as Gary.  
 [The 4TU Discord server](https://discord.com/invite/F2PKpEj) - For being awesome. ;)  
 [RPi Forums](https://forums.raspberrypi.com/) - Having a thread on [Bit-Banging a TSOP NAND.](https://forums.raspberrypi.com/viewtopic.php?t=16775)  
 agilly1989 - Sent me the forum and emotional support.  
