@@ -1,4 +1,113 @@
-# Read this!!!
+Welcome to the de_Fuse SLC/SLCCMPT Flashing guide. While it does still require soldering, it is far easier than soldering directly to the TSOP and is MUCH faster (10-20min vs. over a day!).
+
+I've also included instructions on how to dump/restore MLC and dump OTP/SEEPROM just to show how powerful this tool is (and to make it a complete NAND Dumping guide for consoles that cannot boot into UDPIH or the traditional nanddumper).
+
+Please note that [UDPIH](https://github.com/GaryOderNichts/udpih) is worth a try before trying this (uses a pico as well so you'd have to buy one anyway).
+
+### What you need {docsify-ignore}
+- Raspberry Pi Pico ($4 usually)
+- An SD Card. Cannot be SDHC or SDXC. I personally use a 2GB card from a 3DS.
+- Some soldering experience
+- Recommended to have an SLC/SLCCMPT backup but you can get by with fixing whatever mistake you did without one.
+
+### Set up the SD Card {docsify-ignore}
+1. Download the latest release of [de_Fuse](https://github.com/shinyquagsire23/wii_u_modchip/releases) and extract it to your computer.
+1. Flash the `boot1.img` to the SD Card using Win32Disk Imager or dd (macOS users are on their own).
+1. Format the rest of the SD Card to FAT32.
+1. Copy `fw.img` and (optionally) `otp.bin` to the root of your SD Card.
+    - You will need `otp.bin` if you want to boot a patched OS with de_Fuse.
+
+### Set up the Pico {docsify-ignore}
+1. Hold the `BOOTSEL` button while plugging the Pico into your PC.
+1. Copy the `pico_defuse.uf2 ` file to the `RPI-RP2` storage device.
+
+### Wire it all up! {docsify-ignore}
+Here is a diagram showing where everything is:
+![](./assets/images/de_fuse_diagram.png)
+This is what it could look like when finished:
+![](./assets/images/result.jpg)
+
+### Booting the console into a de_Fused state {docsify-ignore}
+1. Insert the SD Card into the Wii U
+1. Connect the WIi U to Power
+1. Connect the Wii U to a display over HDMI or to your PC with PuTTY or minicom.
+1. Power it on. You should see the minute_minute menu.
+
+### Restoring an SLC/SLCCMPT {docsify-ignore}
+1. Copy the `slc.bin` or `slcccmpt.bin` to the root of your SD Card.
+1. Rename it so the extention is `.raw` (ie `slc.raw`).
+1. Boot the console into a de_Fused state.
+1. Navigate to `Backup and Restore` using the POWER button and press EJECT to select it.
+1. Navigate to `Restore SLC.RAW` (or `Restore SLCCMPT.RAW`) and select it.
+1. Wait for the restore to finish.
+1. Once finished, press POWER to go back to the `Backup and Restore` menu.
+1. Navigate to `Return to Main Menu` and then `Power off`.
+1. Try booting the console. Can be de_Fused or a "normal" boot (if you got this far im sure you can figure out what that means).
+
+### Dumping an SLC/SLCCMPT {docsify-ignore}
+1. Boot the console into a de_Fused state.
+1. Navigate to `Backup and Restore` using the POWER button and press EJECT to select it.
+1. Navigate to `Backup SLC.RAW` (or `Backup SLCCMPT.RAW`) and select it.
+1. Wait for the dump to finish.
+1. Once finished, press POWER to go back to the `Backup and Restore` menu.
+1. Navigate to `Return to Main Menu` and then `Power off`.
+1. Copy the dump to your PC.
+    - What you do from here to fix the backup is out of the scope of this guide. However, you likely don't have an `otp.bin` dump either if you followed this section, so follow the [Dumping OTP](?id=dumping-otp) section to get one.
+
+### Dumping MLC {docsify-ignore}
+!> This requires at least a 64GB/16GB SD Card on 32GB/8GB models respectively.
+
+!> The SD Card will be formatted.
+1. Boot the console into a de_Fused state.
+1. Take out the current SD Card and insert the SD Card you will be using.
+1. Navigate to `Backup and Restore` with POWER and select it with EJECT.
+1. Navigate to `Format redNAND` and select it.
+1. Press EJECT.
+    - It is optional to dump SLC/SLCCMPT.
+1. Wait for the redNAND creation to finish (might take a few hours).
+1. Press `POWER` to go back to the `Backup and Restore` menu.
+1. Navigate to `Return to Main Menu` and then `Power off`.
+1. Insert the redNAND SD Card into your PC.
+1. Dump the 3rd partition of the SD Card (will be roughly 8GB/32GB) to a file on your PC using the same tools you used to flash the `boot1.img`.
+    - What you do from here to fix the backup is out of the scope of this guide.
+1. You now have an MLC dump! Yay!
+
+### Restoring MLC {docsify-ignore}
+!> This requires at least a 64GB/16GB SD Card on 32GB/8GB models respectively and to have already been formatted with a redNAND (The section above).
+1. Boot the console into a de_Fused state.
+1. Insert the redNAND SD Card into the console.
+1. Navigate to `Backup and Restore` with POWER and select it with EJECT.
+1. Navigate to `Restore redNAND` and select it.
+1. Press `EJECT` to continue with the restore.
+1. Wait for it to finish (might take a few hours).
+1. Press `POWER` to go back to the `Backup and Restore` menu.
+1. Navigate to `Return to Main Menu` and then `Power off`.
+
+### Dumping OTP {docsify-ignore}
+1. Boot the console into a de_Fused state.
+1. Navigate to `Backup and Restore` using the POWER button and press EJECT to select it.
+1. Navigate to `Dump OTP via PRSHhax` and select it.
+1. Wait for the PRSHhax exploit to run. After it you should see a message saying "otp.bin successfully dumped".
+1. Navigate to `Power off`
+1. Copy the `otp.bin` to your PC.
+1. You now have an `otp.bin` dump! Yay!
+
+### Dumping SEEPROM {docsify-ignore}
+1. Boot the console into a de_Fused state.
+1. Navigate to `Backup and Restore` using the POWER button and press EJECT to select it.
+1. Navigate to `Dump SEEPROM and OTP ` and select it.
+1. Press `POWER` to go back to the `Backup and Restore` menu.
+1. Navigate to `Return to Main Menu` and then `Power off`.
+1. Copy the `seeprom.bin` to your PC.
+1. You now have a `seeprom.bin` dump! Yay!
+
+### Credits {docsify-ignore}
+- shinyquagsire23 for [de_Fuse](https://github.com/shinyquagsire23/wii_u_modchip/tree/main/pico_defuse), [minute_minute](https://github.com/shinyquagsire23/minute_minute), and generally just being helpful when I had troubles restoring.
+
+<details>
+<summary>CLICK HERE FOR OLD RPI FLASHER GUIDE</summary>
+
+# Read this!!! {docsify-ignore}
 
 This guide is now outdated since there is a software exploit that allows unbricking without soldering! There is a guide for it [here](https://gbatemp.net/threads/cbhc-unbrick-guide-without-soldering.613371/). UDPIH will not work if you somehow deleted OSv10 (00050010-1000400A), so you *must* hardmod the system.
 
@@ -88,5 +197,7 @@ See the next section for flashing the NAND back to the Wii U.
 [RPi Forums](https://forums.raspberrypi.com/) - Having a thread on [Bit-Banging a TSOP NAND.](https://forums.raspberrypi.com/viewtopic.php?t=16775)  
 agilly1989 - Sent me the forum and emotional support.  
 All of my other friends on Discord - You know who you are.  
+
+</details>
 
 You can find the source on [Github](https://github.com/Lazr1026/unbrick/).
