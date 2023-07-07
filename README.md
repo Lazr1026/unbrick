@@ -22,8 +22,8 @@ Please note that [UDPIH](https://github.com/GaryOderNichts/udpih) is worth a try
 1. Copy the `pico_defuse.uf2 ` file to the `RPI-RP2` storage device.
 
 ### Wire it all up! {docsify-ignore}
-Here is a diagram showing where everything is:
-![](./assets/images/de_fuse_diagram.png)
+Here is a diagram showing where everything is (Thanks JadeStrike!):
+![](./assets/images/diagram_final.png)
 This is what it could look like when finished:
 ![](./assets/images/result.jpg)
 
