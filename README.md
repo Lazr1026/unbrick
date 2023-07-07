@@ -26,7 +26,7 @@ Here is a diagram showing where everything is (Thanks JadeStrike!):
 ![](https://cdn.discordapp.com/attachments/780388076945145866/1126682473527525466/diagram_final.png)
 
 This is what it could look like when finished:
-![](./assets/images/result.jpg)
+![](https://cdn.discordapp.com/attachments/782909195724521482/1126687379210633216/20230703_222642.jpg)
 
 ### Booting the console into a de_Fused state {docsify-ignore}
 1. Insert the SD Card into the Wii U
