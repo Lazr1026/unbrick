@@ -23,7 +23,7 @@ Please note that [UDPIH](https://github.com/GaryOderNichts/udpih) is worth a try
 
 ### Wire it all up! {docsify-ignore}
 Here is a diagram showing where everything is (Thanks JadeStrike!):
-![](./assets/images/diagram_final.png)
+![](https://cdn.discordapp.com/attachments/780388076945145866/1126682473527525466/diagram_final.png)
 This is what it could look like when finished:
 ![](./assets/images/result.jpg)
 
