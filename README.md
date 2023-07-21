@@ -1,4 +1,4 @@
-Welcome to the de_Fuse SLC/SLCCMPT Flashing guide. While it does still require soldering, it is far easier than soldering directly to the TSOP and is MUCH faster (10-20min vs. over a day!).
+Welcome to the de_Fuse NAND stuff guide. While it does still require soldering, it is far easier than soldering directly to the TSOP/eMMC and is MUCH faster (10-20min vs. over a day!).
 
 I've also included instructions on how to dump/restore MLC and dump OTP/SEEPROM just to show how powerful this tool is (and to make it a complete NAND Dumping guide for consoles that cannot boot into UDPIH or the traditional nanddumper).
 
