@@ -35,7 +35,7 @@ This is what it could look like when finished:
 1. Power it on. You should see the minute_minute menu.
 
 ### Restoring an SLC/SLCCMPT {docsify-ignore}
-1. Copy the `slc.bin` or `slcccmpt.bin` to the root of your SD Card.
+1. Copy the `slc.bin` or `slccmpt.bin` to the root of your SD Card.
 1. Rename it so the extention is `.raw` (ie `slc.raw`).
 1. Boot the console into a de_Fused state.
 1. Navigate to `Backup and Restore` using the POWER button and press EJECT to select it.
